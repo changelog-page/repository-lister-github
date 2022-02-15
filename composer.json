@@ -1,0 +1,56 @@
+{
+    "name": "changelog/repository-lister-github",
+    "description": "TBD",
+    "keywords": [
+        "changelog",
+        "repository",
+        "list",
+        "git",
+        "github"
+    ],
+    "homepage": "https://github.com/changelog-page/repository-lister-github",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Brian Faust",
+            "email": "hello@basecode.sh",
+            "homepage": "https://basecode.sh",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^8.1",
+        "changelog/hydrator": "^0.1.0",
+        "changelog/repository-lister": "^0.1.0",
+        "guzzlehttp/guzzle": "^7.0.1",
+        "http-interop/http-factory-guzzle": "^1.0",
+        "illuminate/support": "^9.0",
+        "knplabs/github-api": "^3.0",
+        "spatie/data-transfer-object": "^3.7"
+    },
+    "require-dev": {
+        "friendsofphp/php-cs-fixer": "^3.0",
+        "pestphp/pest": "^1.21"
+    },
+    "autoload": {
+        "psr-4": {
+            "Changelog\\RepositoryLister\\GitHub\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Changelog\\RepositoryLister\\GitHub\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/php-cs-fixer fix ./"
+    },
+    "config": {
+        "sort-packages": true,
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}

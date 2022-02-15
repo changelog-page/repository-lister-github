@@ -17,10 +17,10 @@ final class Lister implements Contract
 
     private Client $client;
 
-    public function __construct(array $credentials)
+    public function __construct(string $accessToken)
     {
         $this->client = new Client();
-        $this->client->authenticate($credentials['token'], null, AuthMethod::ACCESS_TOKEN);
+        $this->client->authenticate($accessToken, null, AuthMethod::ACCESS_TOKEN);
     }
 
     public function byUser(string $uuid, ?array $options): Collection
